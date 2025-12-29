@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Picobooth</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Opening Splash -->
+<div id="splash" class="splash">
+  <h1 class="splash-logo">Picobooth 🪩📸</h1>
+  <p class="splash-sub">tap to start</p>
+</div>
+
+
+
+  <h1 class="logo">Picobooth🪩📸</h1>
+
+  <!-- Camera Preview -->
+  <div class="camera-box">
+    <video id="video" autoplay></video>
+    <button id="captureBtn">Click 4 Photos</button>
+  </div>
+
+  <!-- Layout Selector -->
+  <div class="controls">
+    <button onclick="setLayout('one')">1 × 4</button>
+    <button onclick="setLayout('two')">2 × 2</button>
+  </div>
+<!-- Frame Selector -->
+<div class="frames">
+  <button onclick="setFrame('frame1')">Classic</button>
+  <button onclick="setFrame('frame2')">Rounded</button>
+  <button onclick="setFrame('frame3')">Polaroid</button>
+  <button onclick="setFrame('frame4')">Film</button>
+  <button onclick="setFrame('frame5')">Pastel</button>
+  <button onclick="setFrame('frame6')">Dark</button>
+  <button onclick="setFrame('frame7')">Doodle</button>
+  <button onclick="setFrame('frame8')">Glow</button>
+  <button onclick="setFrame('frame9')">Retro</button>
+  <button onclick="setFrame('frame10')">Minimal</button>
+</div>
+
+<!-- STICKERS BAR -->
+<div class="stickers">
+  <img src="stickers/bow.jpeg" onclick="addSticker(this.src)" />
+  <img src="stickers/star.jpeg" onclick="addSticker(this.src)" />
+  <img src="stickers/flower.jpeg" onclick="addSticker(this.src)" />
+  <img src="stickers/heart.jpeg" onclick="addSticker(this.src)" />
+  <img src="stickers/mirrorball.jpeg" onclick="addSticker(this.src)" />
+  <img src="stickers/silverstar.jpeg" onclick="addSticker(this.src)" />
+  
+</div>
+
+
+
+  <!-- Photo Strip -->
+  <div id="strip" class="strip one">
+    <canvas></canvas>
+    <canvas></canvas>
+    <canvas></canvas>
+    <canvas></canvas>
+  </div>
+  <button onclick="downloadStripJPEG()">Download JPEG</button>
+
+
+
+
+<footer class="footer">
+  built w <span>💗</span> by charu 👩🏻‍💻
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="script.js"></script>
+
+
+
+ 
+</body>
+</html>
